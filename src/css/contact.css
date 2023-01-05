@@ -1,0 +1,55 @@
+
+.connect{
+    width: 60px;
+    height: 60px;
+    display: grid;
+    gap: 10px;
+    font-size: 14px;
+    justify-items: center;
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.contact-info-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100vw;
+    height: 85vh;
+    padding: 20px 10px;
+    background: url(https://images.unsplash.com/photo-1541689592655-f5f52825a3b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.contact-link,
+.contact-link:visited {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    transition: transform 0.7s ease-in-out;
+}
+.contact-link::before{
+    width: 20px;
+    height: 20px;
+}
+.contact-link:hover{
+    transform: scale(1.2);
+    color: gray;
+}
+.contact-social-icon-container {
+    width: 30px;
+    height: 30px;
+}
+
+
+.contact-text-container {
+    width: 45vw;
+    padding: 10px 40px;
+}
+.contact-icon-container {
+    display: flex;
+    justify-content: space-around;
+    width: 45vw;
+}
