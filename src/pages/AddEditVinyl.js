@@ -3,7 +3,7 @@ import { Button, Form, Grid, Loader} from 'semantic-ui-react';
 import { storage, db } from '../firebase';
 import { useParams, useNavigate } from 'react-router-dom'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp, doc, getDoc } from 'firebase/firestore';
 
 const initialState = {
     artistName: "",
@@ -26,6 +26,21 @@ const AddEditVinyl = () => {
     // check if form is submitted or not
     const [isSubmit, setIsSubmit] = useState(false);
     const navigate = useNavigate();
+    const {id} = useParams();
+
+    // useEffect will only run once there is an id
+    useEffect(() => {
+        id && getSingleRecord();
+    }, [id])
+
+    const getSingleRecord = async () => {
+        const docRef = doc(db, 'records', id);
+        const snapshot = await getDoc(docRef);
+        if(snapshot.exists()) {
+            setData({...snapshot.data()});
+        }
+    };
+
 
     // useEffect will only run when user uploads file
     useEffect(() => {
