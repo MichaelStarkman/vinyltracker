@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu, Container, Button, Image } from 'semantic-ui-react';
 import { useNavigate, Link } from 'react-router-dom';
 import vinyl from '../asset/vinyl.svg';
+import '../css/navbar.css'
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -28,10 +29,15 @@ const NavBar = () => {
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <h2>Vinyl Tracker</h2>
+                <h1 
+                    className='nav-title'
+                >
+                    Vinyl Tracker
+                </h1>
             </Menu.Item>
             <Menu.Item
                 position='right'
+                style={{ gap: '15px' }}
             >
                 <Button
                     size='mini'
@@ -39,6 +45,12 @@ const NavBar = () => {
                     onClick={() => navigate('/add')}
                 >
                     Add Vinyl
+                </Button>
+                <Button
+                    secondary
+                    onClick={() => navigate('/contact')}
+                >
+                    Contact Dev
                 </Button>
             </Menu.Item>
         </Container>

@@ -74,7 +74,7 @@ const Home = () => {
                                         style={{
                                         height: "150px",
                                         width: "150px",
-                                        borderRadius: "50%",
+                                        borderRadius: "15%",
                                         }}
                                     />
                                     <Card.Header style={{
@@ -89,16 +89,16 @@ const Home = () => {
                                 >
                                     <div>
                                         <Button
-                                            color='green'
+                                            color='purple'
                                             onClick={() => navigate(`/update/${item.id}`)}
                                         >
                                             Update
                                         </Button>
                                         <Button
-                                            color='purple'
+                                            color='green'
                                             onClick={() => handleModal(item)}
                                         >
-                                            View
+                                            Details
                                         </Button>
                                         {open &&
                                             <ModalComp 

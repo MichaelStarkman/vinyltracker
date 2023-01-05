@@ -213,6 +213,12 @@ const AddEditVinyl = () => {
                                     >
                                         Submit
                                     </Button>
+                                    <Button
+                                        color='grey'
+                                        onClick={() => navigate('/')}
+                                    >
+                                        Cancel
+                                    </Button>
                                 </Form>
                             </>
                         )}

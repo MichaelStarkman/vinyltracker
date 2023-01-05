@@ -2,15 +2,24 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
+// const { 
+//   REACT_APP_API_KEY,
+//   REACT_APP_AUTH_DOMAN,
+//   REACT_APP_PROJECT_ID,
+//   REACT_APP_STORAGE_BUCKET,
+//   REACT_APP_MESSAGEING_SENDER_ID,
+//   REACT_APP_APP_ID
+// } = process.env;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAaUKJhdhkM-rsf_15vDiIciPwWZgwrm3c",
-  authDomain: "vinyl-tracker-90dc2.firebaseapp.com",
-  projectId: "vinyl-tracker-90dc2",
-  storageBucket: "vinyl-tracker-90dc2.appspot.com",
-  messagingSenderId: "912741511290",
-  appId: "1:912741511290:web:28a7cdf17e6e688fb60bc3"
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAN}`,
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_MESSAGEING_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_APP_ID}`,
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
