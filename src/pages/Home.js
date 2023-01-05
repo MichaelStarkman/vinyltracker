@@ -4,6 +4,7 @@ import { Button, Card, Container, Grid, Image} from 'semantic-ui-react';
 import { useNavigate } from 'react-router-dom';
 import { onSnapshot, collection, doc, deleteDoc } from 'firebase/firestore';
 import ModalComp from '../Components/ModalComp';
+import Spinner from '../Components/Spinner';
 
 
 const Home = () => {
@@ -33,10 +34,17 @@ const Home = () => {
     }
     }, []);
 
+    // show spinner when loading 
+    if(loading) {
+        return <Spinner />
+    }
+
+    // Modal Function
     const handleModal = (item) => {
         setOpen(true);
         setRecord(item);
     }
+    // Delete Function
     const handleDelete = async (id) => {
         // window pop up confirm
         if(window.confirm("Are you sure you want to delete this record?")) {

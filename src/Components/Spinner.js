@@ -1,9 +1,12 @@
 import React from 'react'
+import { Loader } from 'semantic-ui-react'
 
 const Spinner = () => {
   return (
-    <div>Spinner</div>
-  )
-}
+    <>
+      <Loader content='Loading' active inline='centered' size='huge' />
+    </>
+  );
+};
 
 export default Spinner
