@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import {db} from '../firebase';
 import { Button, Card, Container, Grid, Image} from 'semantic-ui-react';
 import { useNavigate } from 'react-router-dom';
-import { onSnapshot, collection, doc } from 'firebase/firestore';
+import { onSnapshot, collection, doc, deleteDoc } from 'firebase/firestore';
+import ModalComp from '../Components/ModalComp';
 
 
 const Home = () => {
     // Define State
     const [records, setRecords] = useState([]);
+    const [open, setOpen] = useState(false);
+    const [record, setRecord] = useState({});
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -29,6 +32,24 @@ const Home = () => {
         unsub();
     }
     }, []);
+
+    const handleModal = (item) => {
+        setOpen(true);
+        setRecord(item);
+    }
+    const handleDelete = async (id) => {
+        // window pop up confirm
+        if(window.confirm("Are you sure you want to delete this record?")) {
+            try {
+                setOpen(false);
+                await deleteDoc(doc(db, 'records', id))
+                setRecords(records.filter((record) => record.id !== id))
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
+
   return (
 
         <Container textAlign='center'>
@@ -67,10 +88,18 @@ const Home = () => {
                                         </Button>
                                         <Button
                                             color='purple'
-                                            
+                                            onClick={() => handleModal(item)}
                                         >
                                             View
                                         </Button>
+                                        {open &&
+                                            <ModalComp 
+                                                open={open}
+                                                setOpen={setOpen}
+                                                handleDelete={handleDelete}
+                                                {...record}
+                                            />
+                                        }
                                     </div>
                                 </Card.Content>
                             </Card>

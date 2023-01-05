@@ -3,7 +3,7 @@ import { Button, Form, Grid, Loader} from 'semantic-ui-react';
 import { storage, db } from '../firebase';
 import { useParams, useNavigate } from 'react-router-dom'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
-import { addDoc, collection, serverTimestamp, doc, getDoc } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp, doc, getDoc, updateDoc } from 'firebase/firestore';
 
 const initialState = {
     artistName: "",
@@ -115,13 +115,28 @@ const AddEditVinyl = () => {
         let errors = validate();
         if(Object.keys(errors).length) return setErrors(errors);
         setIsSubmit(true);
-        await addDoc(collection(db, "records"), {
-            ...data,
-            timestamp: serverTimestamp()
-        })
+        if(!id) {
+            try {
+                await addDoc(collection(db, "records"), {
+                    ...data,
+                    timestamp: serverTimestamp()
+                })
+            } catch (error) {
+                console.log(error);
+            }
+           
+        } else {
+            try {
+                await updateDoc(doc(db, "records", id), {
+                    ...data,
+                    timestamp: serverTimestamp()
+                })
+            } catch (error) {
+                console.log(error);
+            }
+        }        
         navigate('/');
     };
-
   return (
     <div>
         <Grid 
@@ -139,10 +154,8 @@ const AddEditVinyl = () => {
                     <div>
                         {isSubmit ? <Loader active inline='centered' size='huge'/>: (
                             <>
-                                <h2>Add Vinyl</h2>
-                                <Form
-                                    onSubmit={handleSubmit}
-                                >
+                                <h2>{id ? `Update Vinyl` : "Add New Vinyl"}</h2>
+                                <Form onSubmit={handleSubmit}>
                                     <Form.Input
                                         label='Artist Name'
                                         error={errors.artistName ? {content: errors.artistName} : null}
