@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form, Grid, Loader} from 'semantic-ui-react';
-import { storage } from '../firebase';
+import { storage, db } from '../firebase';
 import { useParams, useNavigate } from 'react-router-dom'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 const initialState = {
     artistName: "",
@@ -24,6 +25,7 @@ const AddEditVinyl = () => {
     const [errors, setErrors] = useState({});
     // check if form is submitted or not
     const [isSubmit, setIsSubmit] = useState(false);
+    const navigate = useNavigate();
 
     // useEffect will only run when user uploads file
     useEffect(() => {
@@ -93,11 +95,17 @@ const AddEditVinyl = () => {
         return errors;
     }
     // validate form component
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         let errors = validate();
         if(Object.keys(errors).length) return setErrors(errors);
-    }
+        setIsSubmit(true);
+        await addDoc(collection(db, "records"), {
+            ...data,
+            timestamp: serverTimestamp()
+        })
+        navigate('/');
+    };
 
   return (
     <div>
