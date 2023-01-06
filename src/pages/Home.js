@@ -64,7 +64,7 @@ const Home = () => {
            
            <Grid columns={3} stackable>
                     {records &&
-                        records.map((item) => (
+                        records.reverse().map((item) => (
                             <Grid.Column key={item.id}>
                             <Card >
                                 <Card.Content>

@@ -37,7 +37,7 @@ const ModalComp = ({
         </Modal.Content>
         <Modal.Actions>
             <Button
-                color='black'
+                color='grey'
                 onClick={() => setOpen(false)}
             >
                 Cancel
