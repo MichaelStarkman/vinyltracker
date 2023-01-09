@@ -2,7 +2,7 @@
 
 
 ##User Flow
-![This is a alt text.](/vinyltracker/src/asset/New%20User%20Flow.svg "User flow map for app.")
+![New User Flow](https://user-images.githubusercontent.com/98721957/211424299-73c71aae-a9d7-4352-9bc8-22420fc3f376.svg)
 
 ##Tech Stack
 *Front-End: React
