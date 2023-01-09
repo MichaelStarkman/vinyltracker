@@ -20,9 +20,14 @@ const ModalComp = ({
         <Modal.Header>Details</Modal.Header>
         <Modal.Content image>
             <Image 
-                size='medium'
+                size='huge'
                 src={img}
                 wrapped
+                style={{
+                    height: "300px",
+                    width: "300px",
+                    borderRadius: "15%",
+                    }}
             />
             <Modal.Description>
                 <Header>

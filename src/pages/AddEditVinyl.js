@@ -150,12 +150,21 @@ const AddEditVinyl = () => {
             <Grid.Row>
                 <Grid.Column
                     textAlign='center'
+                    style={{
+                        margin: '3rem 12rem',
+                        padding: '1rem',
+                        border: '1px solid black'
+                    }}
                 >
                     <div>
-                        {isSubmit ? <Loader active inline='centered' size='huge'/>: (
+                        {isSubmit ? <Loader active inline='centered' size='huge' style={{border: 'none'}}/>: (
                             <>
                                 <h2>{id ? `Update Vinyl` : "Add New Vinyl"}</h2>
-                                <Form onSubmit={handleSubmit}>
+                                <Form onSubmit={handleSubmit}
+                                    style={{
+                                        // border: '1px solid black'
+                                    }}
+                                >
                                     <Form.Input
                                         label='Artist Name'
                                         error={errors.artistName ? {content: errors.artistName} : null}

@@ -60,7 +60,7 @@ const Home = () => {
 
   return (
 
-        <Container textAlign='center'>
+        <Container textAlign='center' style={{ paddingTop: '2rem' }}>
            
            <Grid columns={3} stackable>
                     {records &&
