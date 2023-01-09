@@ -2,7 +2,7 @@
 
 
 ## User Flow
-![New User Flow](https://user-images.githubusercontent.com/98721957/211424299-73c71aae-a9d7-4352-9bc8-22420fc3f376.svg)
+![Vinyl Tracker User Flow](https://user-images.githubusercontent.com/98721957/211425433-d9bafb10-4798-422b-8363-03f6d8491c68.png)
 
 ## Tech Stack
 *Front-End: React
