@@ -1,7 +1,7 @@
 ![Your paragraph text](https://user-images.githubusercontent.com/98721957/213816772-8185b13a-6255-4793-8332-54d078fd1f62.png)
 
 ## User Flow
-![This is a alt text.](/vinyltracker/src/asset/New%20User%20Flow.svg "User flow map for app.")
+![New User Flow](https://user-images.githubusercontent.com/98721957/213816899-5eacc0cb-4cf4-4c82-af98-9ecb18e61d52.svg)
 
 ## Tech Stack
 * Front-End: React
