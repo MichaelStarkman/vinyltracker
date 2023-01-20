@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import AddEditVinyl from './pages/AddEditVinyl';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
+import FrontPage from './pages/FrontPage';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/add' element={<AddEditVinyl />}/>
           <Route path='/update/:id' element={<AddEditVinyl />}/>
           <Route path='/contact' element={<Contact />}/>
+          <Route path='/frontpage' element={<FrontPage />}/>
         </Routes>
         <Footer />
       </div>
