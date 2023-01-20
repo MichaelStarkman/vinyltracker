@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-![This is a alt text.](/vinyltracker/src/asset/logo.png )
-
-
-##User Flow
-![This is a alt text.](/src/asset/New%20User%20Flow.svg "User flow map for app.")
-=======
-![Your paragraph text](https://user-images.githubusercontent.com/98721957/211424390-5e7e4696-5684-41cb-85ff-3894f52be083.png)
-
+![Your paragraph text](https://user-images.githubusercontent.com/98721957/213816772-8185b13a-6255-4793-8332-54d078fd1f62.png)
 
 ## User Flow
-![Vinyl Tracker User Flow](https://user-images.githubusercontent.com/98721957/211425433-d9bafb10-4798-422b-8363-03f6d8491c68.png)
->>>>>>> 8296921e3661df30e48536039892e3c66be15186
+![This is a alt text.](/vinyltracker/src/asset/New%20User%20Flow.svg "User flow map for app.")
 
 ## Tech Stack
 * Front-End: React
