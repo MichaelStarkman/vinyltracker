@@ -12,7 +12,9 @@ const NavBar = () => {
         // inverted
         borderless
         style={{
-            padding: '0.3rem', marginBotton: "20px"
+            padding: '0.3rem', 
+            marginBotton: "20px",
+            backgroundColor: "#04BFBF"
         }}
         attached
     >

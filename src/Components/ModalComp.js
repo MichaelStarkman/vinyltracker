@@ -16,18 +16,18 @@ const ModalComp = ({
     handleDelete
 }) => {
   return (
-    <Modal onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open}>
+    <Modal onClose={() => setOpen(false)} onOpen={() => setOpen(true)} open={open} className='ui modal'>
         <Modal.Header>Details</Modal.Header>
         <Modal.Content image>
             <Image 
                 size='huge'
                 src={img}
                 wrapped
-                style={{
-                    height: "300px",
-                    width: "300px",
-                    borderRadius: "15%",
-                    }}
+                // style={{
+                //     height: "300px",
+                //     width: "300px",
+                //     borderRadius: "15%",
+                //     }}
             />
             <Modal.Description>
                 <Header>

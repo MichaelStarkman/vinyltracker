@@ -1,8 +1,8 @@
-![This is a alt text.](/vinyltracker/src/asset/logo.png "ReadMe Logo for app.")
+![This is a alt text.](/vinyltracker/src/asset/logo.png )
 
 
 ##User Flow
-![This is a alt text.](/vinyltracker/src/asset/New%20User%20Flow.svg "User flow map for app.")
+![This is a alt text.](/src/asset/New%20User%20Flow.svg "User flow map for app.")
 
 ##Tech Stack
 *Front-End: React

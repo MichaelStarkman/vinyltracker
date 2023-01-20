@@ -60,13 +60,20 @@ const Home = () => {
 
   return (
 
-        <Container textAlign='center' style={{ paddingTop: '2rem' }}>
+        <Container 
+            textAlign='center' 
+            style={{ 
+                padding: '2rem',
+                
+            }}>
            
-           <Grid columns={3} stackable>
+           <Grid columns={4} stackable>
                     {records &&
                         records.reverse().map((item) => (
                             <Grid.Column key={item.id}>
-                            <Card >
+                            <Card 
+                                style={{ backgroundColor: '#F2E0C9' }}
+                            >
                                 <Card.Content>
                                     <Image 
                                         src={item.img}
