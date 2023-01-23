@@ -1,17 +1,26 @@
 import React from 'react'
-// import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
+import TextFile from '../Components/TextBox';
+import hero from '../asset/hero.jpg'
+import '../css/hero.css'
+import Instructions from '../Components/Instructions';
 
 
 const FrontPage = () => {
   return (      
     
     <div>
-        <Button variant="primary">Primary</Button>
-        <h1>Carousel Here</h1>
-        <h1>Text Box</h1>
-        <h1>Getting Started Here</h1>
-
+        <div className="hero-wrap">
+          <img
+            className="hero-bg"
+            src={hero}
+            alt=""
+          />
+          <div className="hero-content">
+            <h1>Vinyl Tracker</h1>
+          </div>
+        </div>
+        <TextFile />
+        <Instructions />
     </div>
     
   );

@@ -1,0 +1,27 @@
+.hero-wrap {
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+  }
+  
+  .hero-bg {
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .hero-content {
+    position: relative;
+    padding: 20% 5% 10% 55%;
+  }
+
+  .hero-content h1 {
+    font-size: 80px;
+    background: -webkit-linear-gradient(#d73266, #06127a);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-family: 'Press Start 2P', cursive;  
+  }
