@@ -1,13 +1,16 @@
 .text-section {
     padding: 10% 20%;
-    background-color: rgb(226, 205, 109);
+    background-image: linear-gradient(to right, #FCCF31, #F55555);
+
 }
 
+
 .text-section-quote {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    font-style: italic;
+    font-size: 22px;
+    font-weight: 800;
+    /* letter-spacing: 0.1rem; */
+    font-style: bold;
+    font-family: 'Comfortaa', cursive;
 }
 
 .q-line-one {
@@ -29,25 +32,5 @@
 }
 
 .line-two-container {
-    padding-left: 25%;
+    padding-left: 35%;
 }
-
-/* .icon-container {
-    width: 100px;
-    height: 100px;
-    /* background-color: #0CB1C4; */
-    /* transform-origin: center;
-    animation-name: spin;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    } */
-/* }  */

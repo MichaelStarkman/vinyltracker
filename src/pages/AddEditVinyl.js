@@ -144,7 +144,8 @@ const AddEditVinyl = () => {
             verticalAlign='middle'
             columns="3"
             style={{
-                height: "80vh"
+                height: "80vh",
+                marginBottom: '5%',
             }}
         >
             <Grid.Row>
@@ -205,7 +206,7 @@ const AddEditVinyl = () => {
                                         label='Notes'
                                         error={errors.notes ? {content: errors.notes} : null}
 
-                                        placeholder='Enter Album Title'
+                                        placeholder='Enter Notes'
                                         name="notes"
                                         onChange={handleChange}
                                         value={notes}  

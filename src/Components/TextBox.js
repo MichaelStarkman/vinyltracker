@@ -2,7 +2,6 @@ import React from 'react'
 import '../css/TextBox.css'
 import { Icon } from 'semantic-ui-react'
 
-
 function TextFile() {
   return (
     <section className='text-section'>
@@ -11,9 +10,6 @@ function TextFile() {
             <div className='line-two-container'>
               <p className='text-section-quote q-line-two'>- Ludwig van Beethoven<Icon name='music' size='huge' /></p>
             </div>
-            {/* <div className='icon-container'>
-                <Icon name='music' size='huge' />
-            </div> */}
         </div>
     </section>
   )
