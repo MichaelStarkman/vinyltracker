@@ -135,7 +135,7 @@ const AddEditVinyl = () => {
                 console.log(error);
             }
         }        
-        navigate('/');
+        navigate('/home');
     };
   return (
     <div>
@@ -225,7 +225,7 @@ const AddEditVinyl = () => {
                                     </Button>
                                     <Button
                                         color='grey'
-                                        onClick={() => navigate('/')}
+                                        onClick={() => navigate('/home')}
                                     >
                                         Cancel
                                     </Button>

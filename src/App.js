@@ -18,11 +18,11 @@ function App() {
       <div>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='/home' element={<Home />}/>
           <Route path='/add' element={<AddEditVinyl />}/>
           <Route path='/update/:id' element={<AddEditVinyl />}/>
           <Route path='/contact' element={<Contact />}/>
-          <Route path='/frontpage' element={<FrontPage />}/>
+          <Route path='/' element={<FrontPage />}/>
         </Routes>
         <Footer />
       </div>

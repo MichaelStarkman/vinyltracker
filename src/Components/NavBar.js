@@ -22,7 +22,7 @@ const NavBar = () => {
             <Menu.Item
                 name='home'
             >
-                <Link to='/frontpage'>
+                <Link to='/'>
                     <Image 
                         size='mini' 
                         src={vinyl}
@@ -50,7 +50,7 @@ const NavBar = () => {
                 </Button>
                 <Button
                     color='yellow'
-                    onClick={() => navigate('/')}
+                    onClick={() => navigate('/home')}
                 >
                     View Vinyls
                 </Button>
