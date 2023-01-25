@@ -1,5 +1,11 @@
 ![Your paragraph text](https://user-images.githubusercontent.com/98721957/213816772-8185b13a-6255-4793-8332-54d078fd1f62.png)
 
+## Website Link
+https://vinyl-tracker.netlify.app/
+
+## Github
+https://github.com/MichaelStarkman/vinyltracker
+
 ## User Flow
 ![New User Flow](https://user-images.githubusercontent.com/98721957/213816899-5eacc0cb-4cf4-4c82-af98-9ecb18e61d52.svg)
 
@@ -21,15 +27,15 @@ Utilized a vinyl model in which users are able to create, edit, and delete listi
 
 ## Stretch Goals Attained
 * React Router (Home Page, Listings, Contact Page)
-* Animated components (hero carousel, button hovers, link hovers, key frames, etc.)
+* Animated components (hero, button hovers, key frames, loading spiiner, etc.)
 * Add contact page
+* Revamp homepage: hero section, featured, quote, grids section
+
 
 
 ## Future Features
 * User Authentication 
-* Mobile-First Approach
 * Fully responsive across devices (mobile, tablet, desktop)
-* Revamp homepage: hero section, featured, quote, grids section
 * Add filter to model
 * Implementation of user login
 
